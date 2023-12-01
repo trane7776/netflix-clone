@@ -26,7 +26,7 @@ export async function POST(req: Request) {
         emailVerified: new Date(),
       },
     });
-    return new Response(`${user}`, {
+    return new Response(JSON.stringify(user), {
       status: 200,
     });
   } catch (error) {
