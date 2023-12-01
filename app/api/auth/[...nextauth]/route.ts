@@ -8,6 +8,7 @@ import GoogleProvider from "next-auth/providers/google";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 
 import prismadb from "@/lib/prismadb";
+
 const handler = NextAuth({
   providers: [
     GithubProvider({
