@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { SessionProvider } from "next-auth/react";
 import "./globals.css";
+import AuthContext from "@/context/AuthContext";
 export const metadata: Metadata = {
   title: "Netflix Clone",
   description: "Netflix Clone App",
@@ -12,7 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <AuthContext>
+        <body>{children}</body>
+      </AuthContext>
     </html>
   );
 }
